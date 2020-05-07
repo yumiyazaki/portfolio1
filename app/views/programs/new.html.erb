@@ -1,0 +1,8 @@
+<%= form_for @program, method: :post do |f| %>
+  <h1>閲覧アニメの情報を入力</h1>
+  <p>タイトル：<%= f.text_field :title %></p>
+  <p>放送局：<%= f.text_field :broadcaster %></p>
+  <p>曜日：<%= f.text_field :wday %></p>
+  <p>放送時間：<%= f.text_field :airtime %></p>
+  <input type="submit" value="送信">
+<% end %>
