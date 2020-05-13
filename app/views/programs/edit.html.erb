@@ -1,0 +1,8 @@
+<p>更新</p>
+<%= form_with model: @program, local: true do |f| %>
+  <p>アニメタイトル：<%= f.text_field :title %></p>
+  <p>放送局：<%= f.text_field :broadcaster %></p>
+  <p>曜日：<%= f.text_field :wday %></p>
+  <p>放送時間：<%= f.text_field :airtime %></p>
+  <%= f.submit "送信" %>
+<% end %>

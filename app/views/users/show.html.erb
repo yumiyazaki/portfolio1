@@ -3,4 +3,6 @@
   <p><%= program.broadcaster %></p>
   <p><%= program.wday %></p>
   <p><%= program.airtime %></p>
+  <%= link_to "編集", edit_program_path(program) %>
+  <%= link_to "削除", program_path(program), method: :delete, data: {confirm: "削除しますか？"} %>
 <% end %>

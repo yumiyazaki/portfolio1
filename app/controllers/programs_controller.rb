@@ -10,7 +10,27 @@ class ProgramsController < ApplicationController
   end
 
   def create
-    Program.create(title: program_params[:title], broadcaster: program_params[:broadcaster], user_id: current_user.id)
+    @program = Program.new(program_params)
+    if @program.save
+      redirect_to programs_path, notice: "投稿完了しました"
+    else
+      flash.now[:alert] = "投稿に失敗しました"
+      render :index
+    end
+  end
+
+  def edit
+    @program = Program.find(params[:id])
+  end
+
+  def update
+    program = Program.find(params[:id])
+    program.update(program_params)
+  end
+
+  def destroy
+    program = Program.find(params[:id])
+    program.destroy
   end
 
   def move_to_index

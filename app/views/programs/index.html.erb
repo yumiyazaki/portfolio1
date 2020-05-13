@@ -1,12 +1,6 @@
-<h1>閲覧アニメ一覧</h1>
-<% if user_signed_in? %>
-  <% @programs.each do |program| %>
-    <p>登録者　<%= program.user.nickname.present? ? "登録者　#{program.user.nickname}" : "No.#{program.user.id}" %></p>
-    <p><%= program.title %></p>
-    <p><%= program.broadcaster %></p>
-    <p><%= program.wday %></p>
-    <p><%= program.airtime %></p>
-  <% end %>
-<% else %>
+  <h1>閲覧アニメ一覧</h1>
+  <% if user_signed_in? %>
+  <p>ようこそ</p>
+  <% else %>
   <p>ログインしてください</p>
-<% end %>
+  <% end %>
