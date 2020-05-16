@@ -1,0 +1,25 @@
+@import "bootstrap/scss/bootstrap";
+
+.container {
+  width: 0 auto;
+  text-align: center;
+}
+
+.jumbotron-login {
+  background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/kaguyasama.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.jumbotron-sign_up {
+  background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/fgo.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.jumbotron-password {
+  background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/sao.jpg");
+  background-size: cover;
+  height: 90vh;
+  background-position: center bottom;
+}

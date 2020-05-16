@@ -1,5 +1,4 @@
 class ProgramsController < ApplicationController
-  before_action :move_to_index, except: :index
 
   def index
     @programs = Program.all
@@ -10,13 +9,7 @@ class ProgramsController < ApplicationController
   end
 
   def create
-    @program = Program.new(program_params)
-    if @program.save
-      redirect_to programs_path, notice: "投稿完了しました"
-    else
-      flash.now[:alert] = "投稿に失敗しました"
-      render :index
-    end
+    Program.create(title: program_params[:title], broadcaster: program_params[:broadcaster], wday: program_params[:wday], airtime: program_params[:airtime], user_id: current_user.id)
   end
 
   def edit
@@ -31,10 +24,6 @@ class ProgramsController < ApplicationController
   def destroy
     program = Program.find(params[:id])
     program.destroy
-  end
-
-  def move_to_index
-    redirect_to action: :index unless user_signed_in?
   end
 
   private

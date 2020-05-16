@@ -1,24 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Portfolio1</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>Portfolio1</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <% if user_signed_in? %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <%= link_to "トップ", programs_path %>
-      <%= link_to '投稿画面へ', new_program_path %> 
-      <%= link_to 'マイページへ', user_path(current_user.id) %> 
-    <% else %>
-      <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-      <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-    <% end %>
-    <%= yield %>
-  </body>
+<body>
+  <%= render "shared/navbar" %>
+  <%= yield %>
+</body>
 </html>
