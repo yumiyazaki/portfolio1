@@ -1,4 +1,4 @@
-<%= form_for @program, method: :post do |f| %>
+<%= form_with model: @program, local: true do |f| %>
   <h1>閲覧アニメの情報を入力</h1>
   <p>タイトル：<%= f.text_field :title %></p>
   <p>放送局：<%= f.text_field :broadcaster %></p>

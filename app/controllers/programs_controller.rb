@@ -9,7 +9,14 @@ class ProgramsController < ApplicationController
   end
 
   def create
-    Program.create(title: program_params[:title], broadcaster: program_params[:broadcaster], wday: program_params[:wday], airtime: program_params[:airtime], user_id: current_user.id)
+    @program = Program.create(title: program_params[:title], broadcaster: program_params[:broadcaster], wday: program_params[:wday], airtime: program_params[:airtime], user_id: current_user.id)
+    if @program.save
+      flash[:notice] = "投稿完了しました"
+      redirect_to programs_path
+    else
+      flash.now[:alert] = "投稿に失敗しました"
+      render :new
+    end
   end
 
   def edit
@@ -24,6 +31,10 @@ class ProgramsController < ApplicationController
   def destroy
     program = Program.find(params[:id])
     program.destroy
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
 
   private
