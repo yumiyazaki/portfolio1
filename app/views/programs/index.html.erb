@@ -1,6 +1,19 @@
-  <h1>閲覧アニメ一覧</h1>
+<div class="login-top">
   <% if user_signed_in? %>
-  <p>ようこそ</p>
-  <% else %>
-  <p>ログインしてください</p>
+  <h2>継続視聴予定の作品！</h2>
+  <h2>忘れないよう記録しておこう！！</h2>
+    <%= link_to "マイページ", user_path(current_user.id), class: "btn btn-primary" %>
+    <%= link_to "投稿画面", new_program_path, class: "btn btn-info" %>
+</div>
+<% else %>
+<div class="top">
+  <h2>閲覧中アニメの簡単なメモサイトです。</h2>
+  <h2>登録できる内容</h2>
+  <li>アニメタイトル</li>
+  <li>放送局</li>
+  <li>曜日</li>
+  <li>放送時間</li>
+  <%= link_to "新規登録", new_user_registration_path, class: "btn btn-success" %>
+  <%= link_to "登録済みの方はこちら", user_session_path, class: "btn btn-warning" %>
   <% end %>
+</div>

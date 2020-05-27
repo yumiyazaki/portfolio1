@@ -18,8 +18,41 @@
 }
 
 .jumbotron-password {
-  background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/sao.jpg");
+  background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/fate_hf.jpg");
   background-size: cover;
   height: 90vh;
   background-position: center bottom;
+}
+
+.header-contents {
+  width: 0 auto;
+  margin-left: auto
+}
+
+.top h2 {
+  text-align: center;
+  font-size: 2.5vw;
+  margin: 5% 5%;
+}
+
+.top li {
+  text-align: center;
+}
+
+.top .btn {
+  color: white;
+  margin: 3% 8%;
+  width: 21em
+}
+
+.login-top h2 {
+  text-align: center;
+  font-family: monospace;
+  font-size: 2.5vw;
+  margin: 5% 5%;
+}
+
+.login-top .btn {
+  margin: 3% 8%;
+  width: 21em
 }

@@ -1,11 +1,13 @@
-<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-<% if user_signed_in? %>
-  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-  <%= link_to "トップ", programs_path %>
-  <%= link_to '投稿画面へ', new_program_path %> 
-  <%= link_to 'マイページへ', user_path(current_user.id) %> 
-<% else %>
-  <%= link_to "ログイン", new_user_session_path, class: 'post' %>
-  <%= link_to "新規登録", new_user_registration_path, class: 'post' %>
-<% end %>
+<nav class="navbar navbar-expand-sm navbar-dark bg-info m-0 p-3">
+  <a class="navbar-brand" href="/">MEMO Anime</a>
+  <div class="header-contents">
+    <% if user_signed_in? %>
+    <%= link_to 'マイページへ', user_path(current_user.id) %> 
+    <%= link_to '投稿画面へ', new_program_path %> 
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <% else %>
+    <%= link_to "ログイン", new_user_session_path %>
+    <%= link_to "新規登録", new_user_registration_path %>
+    <% end %>
+  </div>
 </nav>
