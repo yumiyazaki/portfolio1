@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.new {
+  text-align: center;
+  padding: 5% 5%
+}
+
 .jumbotron-login {
   background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/kaguyasama.jpg");
   background-size: cover;
@@ -55,4 +60,19 @@
 .login-top .btn {
   margin: 3% 8%;
   width: 21em
+}
+
+.new-contents .content-card-info {
+  justify-content: space-around;
+  display: table-cell;
+  width: 10%;
+  height: 10%;
+  padding: 10px 10px;
+  margin: 10px 40px;
+  background-color: #e8e8e8;
+  border-radius: 1em;
+}
+
+.new-contents .content-card-info-name {
+  font-size: calc(10px + 1vw);
 }

@@ -1,8 +1,29 @@
-<% @user.programs.each do |program| %>
-  <p><%= program.title %></p>
-  <p><%= program.broadcaster %></p>
-  <p><%= program.wday %></p>
-  <p><%= program.airtime %></p>
-  <%= link_to "編集", edit_program_path(program) %>
-  <%= link_to "削除", program_path(program), method: :delete, data: {confirm: "削除しますか？"} %>
-<% end %>
+<h1>マイページ</h1>
+<div class="new-contents row">
+  <td><% @user.programs.each do |program| %></td>
+
+  <div class="content-card col-lg-5">
+    <div class="content-card-info">
+
+      <div class="content-card-info-name">
+        <th>タイトル：<%= program.title %></th>
+      </div>
+      
+      <div class="content-card-info-name">
+        <th>放送局：<%= program.broadcaster %></th>
+      </div>
+
+      <div class="content-card-info-name">
+        <th>曜日：<%= program.wday %></th>
+      </div>
+
+      <div class="content-card-info-name">
+        <th>放送時間：<%= program.airtime %></th>
+      </div>
+
+      <%= link_to "編集", edit_program_path(program), class: "btn btn-success" %>
+      <%= link_to "削除", program_path(program), class: "btn btn-danger", method: :delete, data: {confirm: "削除しますか？"} %>
+    </div>
+  </div>
+  <% end %>
+</div>

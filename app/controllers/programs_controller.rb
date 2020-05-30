@@ -9,7 +9,13 @@ class ProgramsController < ApplicationController
   end
 
   def create
-    @program = Program.new(title: program_params[:title], broadcaster: program_params[:broadcaster], wday: program_params[:wday], airtime: program_params[:airtime], user_id: current_user.id)
+    @program = Program.new(
+      title: program_params[:title],
+      broadcaster: program_params[:broadcaster],
+      wday: program_params[:wday],
+      airtime: program_params[:airtime],
+      user_id: current_user.id
+    )
     if @program.save
       flash[:info] = "投稿完了しました"
       redirect_to programs_path
@@ -40,7 +46,7 @@ class ProgramsController < ApplicationController
   private
 
   def program_params
-    params.permit(:title, :broadcaster, :wday, :airtime)
+    params.require(:program).permit(:title, :broadcaster, :wday, :airtime)
   end
 
 end

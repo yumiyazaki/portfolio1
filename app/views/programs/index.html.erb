@@ -2,7 +2,7 @@
   <% if user_signed_in? %>
   <h2>継続視聴予定の作品！</h2>
   <h2>忘れないよう記録しておこう！！</h2>
-    <%= link_to "マイページ", user_path(current_user.id), class: "btn btn-primary" %>
+    <%= link_to "マイページ", user_path(current_user.id), class: "btn btn-warning" %>
     <%= link_to "投稿画面", new_program_path, class: "btn btn-info" %>
 </div>
 <% else %>
