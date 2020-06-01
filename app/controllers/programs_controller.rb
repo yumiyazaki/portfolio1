@@ -30,13 +30,25 @@ class ProgramsController < ApplicationController
   end
 
   def update
-    program = Program.find(params[:id])
-    program.update(program_params)
+    @program = Program.find(params[:id])
+    if @program.update(program_params)
+      flash[:info] = "記録作品を編集しました。"
+      redirect_to user_path
+    else
+      flash.now[:danger] = "記録作品の編集に失敗しました。"
+      render :edit
+    end
   end
 
   def destroy
-    program = Program.find(params[:id])
-    program.destroy
+    @program = Program.find(params[:id])
+    if @program.destroy
+      flash[:info] = "記録作品を削除しました"
+      redirect_to user_path
+    else
+      flash[:danger] = "記録作品の削除に失敗しました"
+      render :index
+    end
   end
 
   def move_to_index

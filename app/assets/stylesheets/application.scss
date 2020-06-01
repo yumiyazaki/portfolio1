@@ -5,25 +5,32 @@
   text-align: center;
 }
 
+.container h3 {
+  text-align: right;
+}
+
+.update-container {
+  text-align: center;
+  padding: 10%;
+}
+
 .new {
   text-align: center;
   padding: 5% 5%
 }
 
 .jumbotron-login {
-  background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/kaguyasama.jpg");
+  background-image: url("https://www.tbs.co.jp/anime/haganai/special/images/wall/2k2sena1221.jpg");
   background-size: cover;
-  background-position: center bottom;
 }
 
 .jumbotron-sign_up {
-  background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/fgo.jpg");
+  background-image: url("https://www.tbs.co.jp/anime/haganai/special/images/wall/1k2yozora1221.jpg");
   background-size: cover;
-  background-position: center bottom;
 }
 
 .jumbotron-password {
-  background-image: url("https://aniplex-next.jp/stayhome/assets/img/download/fate_hf.jpg");
+  background-image: url("https://www.tbs.co.jp/anime/haganai/special/images/wall/pc1/K1_1366x768.jpg");
   background-size: cover;
   height: 90vh;
   background-position: center bottom;
