@@ -17,7 +17,7 @@
     <div class="form-group row justify-content-center">
       <div class="row">
         <div class="col-xs-3">
-          <%= f.label :password %>
+          <%= f.label :password, "パスワード" %>
           <%= f.password_field :password, autocomplete: 'current-password', class: 'form-control' %>
 
           <% if @minimum_password_length %>
@@ -30,7 +30,7 @@
     <div class="form-group row justify-content-center">
       <div class="row">
         <div class="col-xs-3">
-          <%= f.label :password_confirmation %>
+          <%= f.label :password_confirmation, "パスワード確認" %>
           <%= f.password_field :password_confirmation, autocomplete: 'current-password', class: 'form-control' %>
         </div>
       </div>
