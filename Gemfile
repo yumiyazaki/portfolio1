@@ -3,8 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
+gem 'pg', '>= 0.18', '< 2.0'
 gem 'rails', '~> 6.0.3'
-gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 4.1'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 4.0'
