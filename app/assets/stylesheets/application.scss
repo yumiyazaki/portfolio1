@@ -27,6 +27,7 @@
 .jumbotron-sign_up {
   background-image: url("https://www.tbs.co.jp/anime/haganai/special/images/wall/1k2yozora1221.jpg");
   background-size: cover;
+  height: 85vh;
 }
 
 .jumbotron-password {
@@ -65,8 +66,17 @@
 }
 
 .login-top .btn {
+  color: white;
   margin: 3% 8%;
   width: 21em
+}
+
+.login-top-btn {
+  text-align:center;
+}
+
+.top-btn {
+  text-align: center;
 }
 
 .new-contents .content-card-info {

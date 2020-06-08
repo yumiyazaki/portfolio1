@@ -2,8 +2,10 @@
   <% if user_signed_in? %>
   <h2>継続視聴予定の作品！</h2>
   <h2>忘れないよう記録しておこう！！</h2>
+  <div class="login-top-btn">
     <%= link_to "マイページ", user_path(current_user.id), class: "btn btn-warning" %>
     <%= link_to "投稿画面", new_program_path, class: "btn btn-info" %>
+  </div>
 </div>
 <% else %>
 <div class="top">
@@ -13,7 +15,9 @@
   <li>放送局</li>
   <li>曜日</li>
   <li>放送時間</li>
-  <%= link_to "新規登録", new_user_registration_path, class: "btn btn-success" %>
-  <%= link_to "登録済みの方はこちら", user_session_path, class: "btn btn-warning" %>
+  <div class="top-btn">
+    <%= link_to "新規登録", new_user_registration_path, class: "btn btn-success" %>
+    <%= link_to "登録済みの方はこちら", user_session_path, class: "btn btn-warning" %>
+  </div>
   <% end %>
 </div>
