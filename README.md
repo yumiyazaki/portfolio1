@@ -16,4 +16,4 @@ Ruby on Railsで制作したアプリとなります
 約3週間
 
 ## 作者
-[宮崎 悠: Twitter](https://twitter.com/yumyzk)
+宮崎　悠
